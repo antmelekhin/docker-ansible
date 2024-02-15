@@ -6,16 +6,7 @@ RUN set -eux \
         g++ \
         gcc \
         make \
-        musl-dev
-
-ARG ANSIBLE_VERSION='latest'
-RUN set -eux \
-    && if [ "${ANSIBLE_VERSION}" = 'latest' ]; then \
-        pip3 install --no-cache-dir ansible; \
-    fi
-
-RUN set -eux \
-    && apk add --update --no-cache \
+        musl-dev \
         krb5-dev \
     && pip3 install --no-cache-dir \
         pywinrm \
@@ -27,7 +18,7 @@ RUN set -eux \
         setuptools \
         wheel
 
-FROM python:3.11-alpine3.18
+FROM antmelekhin/docker-ansible:9
 LABEL maintainer='Anton Melekhin'
 
 COPY --from=builder /usr/local/lib/python3.11/site-packages/ /usr/local/lib/python3.11/site-packages/
