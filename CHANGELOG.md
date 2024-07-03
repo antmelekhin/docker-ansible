@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.1](https://github.com/antmelekhin/docker-ansible/compare/v1.0.0...v1.0.1) (2024-07-03)
+
+
+### Continuous Integration
+
+* update release rules ([b5b8b4c](https://github.com/antmelekhin/docker-ansible/commit/b5b8b4c950fb3d8030983a2b85549ce788810ec8))
+* update release workflow ([16c5883](https://github.com/antmelekhin/docker-ansible/commit/16c5883519fb973b3843ae973d5fe37fff11ed66))
+
+
+### Fixes
+
+* merge Dockerfiles ([fcd2738](https://github.com/antmelekhin/docker-ansible/commit/fcd27385e8befd937853377f845fb292f7082f21))
+
 ## [1.0.0](https://github.com/antmelekhin/docker-ansible/compare/...v1.0.0) (2024-02-15)
 
 
