@@ -32,17 +32,20 @@ jobs:
         uses: 'docker/setup-buildx-action@v3'
 
       - name: 'Login to DockerHub'
+        if: ${{ github.event_name != 'pull_request' }}
         uses: 'docker/login-action@v3'
         with:
-          username: 'antmelekhin'
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: 'Build and push ${{ matrix.tag }}'
         uses: 'docker/build-push-action@v6'
         with:
+          cache-from: 'type=gha,scope=${{ matrix.tag }}'
+          cache-to: 'type=gha,scope=${{ matrix.tag }}'
           context: .
           file: 'Dockerfile'
           build-args: ANSIBLE_VERSION=${{ matrix.tag }}
           platforms: 'linux/amd64'
-          push: true
-          tags: 'antmelekhin/docker-ansible:${{ matrix.tag }}'
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: '${{ github.repository }}:${{ matrix.tag }}'
