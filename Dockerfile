@@ -8,13 +8,13 @@ RUN set -eux \
     && PATCH_VERSION="$( echo "${ANSIBLE_VERSION}" | awk -F'.' '{print $3}' )" \
     && REGEX_VERSION='^[[:digit:]]' \
     \
-    && if [[ "${ANSIBLE_VERSION}" == 'latest' ]]; then \
+    && if [ "${ANSIBLE_VERSION}" = 'latest' ]; then \
         pip3 install --no-cache-dir ansible; \
-    elif [[ "${PATCH_VERSION}" =~ ${REGEX_VERSION} ]]; then \
+    elif echo "${PATCH_VERSION}" | grep -Eq "${REGEX_VERSION}"; then \
         pip3 install --no-cache-dir ansible=="${ANSIBLE_VERSION}"; \
-    elif [[ "${MINOR_VERSION}" =~ ${REGEX_VERSION} ]]; then \
+    elif echo "${MINOR_VERSION}" | grep -Eq "${REGEX_VERSION}"; then \
         pip3 install --no-cache-dir ansible~="${MAJOR_VERSION}.${MINOR_VERSION}"; \
-    elif [[ "${MAJOR_VERSION}" =~ ${REGEX_VERSION} ]]; then \
+    elif echo "${MAJOR_VERSION}" | grep -Eq "${REGEX_VERSION}"; then \
         pip3 install --no-cache-dir ansible~="${MAJOR_VERSION}.0"; \
     else \
         fail; \
