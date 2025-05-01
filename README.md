@@ -1,17 +1,24 @@
 # Docker images for running Ansible
 
-## Build
+## Build and run
 
-```bash
-docker build --build-arg='ANSIBLE_VERSION=9' -t antmelekhin/docker-ansible:9 -f Dockerfiles/ansible.Dockerfile .
-docker build --build-arg='ANSIBLE_VERSION=latest' -t antmelekhin/docker-ansible:latest -f Dockerfiles/ansible.Dockerfile .
-docker build -t antmelekhin/docker-ansible:9-pywinrm -f Dockerfiles/pywinrm.Dockerfile .
-docker build -t antmelekhin/docker-ansible:latest-pywinrm -f Dockerfiles/pywinrm.Dockerfile .
-```
+- Build the image
 
-## Run ansible-playbook
+    ```bash
+    export ANSIBLE_VERSION='10'
+    docker build --build-arg="ANSIBLE_VERSION=${ANSIBLE_VERSION}" -t "docker-ansible:${ANSIBLE_VERSION}" -f Dockerfile .
+    ```
 
-```bash
-docker run --rm -t antmelekhin/docker-ansible:9 ansible-playbook -i inventory.yml playbook.yml
-docker run --rm -t antmelekhin/docker-ansible:9-pywinrm ansible-playbook -i win_inventory.yml win_playbook.yml
-```
+- Run ansible-playbook
+
+    ```bash
+    docker run --rm -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa -t "docker-ansible:${ANSIBLE_VERSION}" ansible-playbook -i inventory.yml playbook.yml
+    ```
+
+## License
+
+MIT
+
+## Author
+
+Melekhin Anton.
