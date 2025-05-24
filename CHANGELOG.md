@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.2](https://github.com/antmelekhin/docker-ansible/compare/v1.0.1...v1.0.2) (2025-05-24)
+
+
+### Documentation
+
+* **README:** update README and add workflow for update DockerHub description ([de9df36](https://github.com/antmelekhin/docker-ansible/commit/de9df36971fe6bfcd2ceca3ac2312505e56676c5))
+
+
+### Styles
+
+* fixing lint errors ([2d8d14c](https://github.com/antmelekhin/docker-ansible/commit/2d8d14c2f3b00b76ead67c7e17c7e9d31d8ef8a6))
+
 ## [1.0.1](https://github.com/antmelekhin/docker-ansible/compare/v1.0.0...v1.0.1) (2024-07-03)
 
 
