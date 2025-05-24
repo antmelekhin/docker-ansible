@@ -25,9 +25,9 @@ RUN set -eux \
         coreutils \
         g++ \
         gcc \
+        krb5-dev \
         make \
         musl-dev \
-        krb5-dev \
     \
     && pip3 install --no-cache-dir \
         pywinrm \
