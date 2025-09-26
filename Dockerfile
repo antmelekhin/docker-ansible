@@ -1,4 +1,4 @@
-FROM python:3.11-alpine3.18 AS builder
+FROM python:3.11-alpine3.22 AS builder
 
 ARG ANSIBLE_VERSION='latest'
 
@@ -39,7 +39,7 @@ RUN set -eux \
         setuptools \
         wheel
 
-FROM python:3.11-alpine3.18
+FROM python:3.11-alpine3.22
 LABEL maintainer='Anton Melekhin'
 
 RUN set -eux \
