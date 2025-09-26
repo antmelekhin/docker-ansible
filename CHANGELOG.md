@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/antmelekhin/docker-ansible/compare/v1.0.2...v1.0.3) (2025-09-26)
+
+
+### Fixes
+
+* update base image version ([b20e7d5](https://github.com/antmelekhin/docker-ansible/commit/b20e7d50a8832cb2a12e0caf0d0c00e742eb9760))
+
 ## [1.0.2](https://github.com/antmelekhin/docker-ansible/compare/v1.0.1...v1.0.2) (2025-05-24)
 
 
