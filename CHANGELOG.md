@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/antmelekhin/docker-ansible/compare/v1.0.3...v1.1.0) (2025-10-31)
+
+
+### Features
+
+* add new versions ([0ca6b29](https://github.com/antmelekhin/docker-ansible/commit/0ca6b2975fdd2bd6cc3b40ab2481ff047d744531))
+
 ## [1.0.3](https://github.com/antmelekhin/docker-ansible/compare/v1.0.2...v1.0.3) (2025-09-26)
 
 
