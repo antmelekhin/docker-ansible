@@ -17,8 +17,11 @@ jobs:
       matrix:
         include:
           - tag: 'latest'
+          - tag: '12.2.0'
           - tag: '12.1.0'
           - tag: '12.0.0'
+          - tag: '11.12.0'
+          - tag: '11.11.0'
           - tag: '11.10.0'
           - tag: '11.9.0'
           - tag: '11.8.0'
