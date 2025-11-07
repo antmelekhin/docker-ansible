@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/antmelekhin/docker-ansible/compare/v1.1.0...v1.2.0) (2025-11-07)
+
+
+### Features
+
+* add 11.11, 11.12 and 12.2 versions ([b6956cb](https://github.com/antmelekhin/docker-ansible/commit/b6956cb5ac8a088bb648928b0e30ce34a8ece3ac))
+
 ## [1.1.0](https://github.com/antmelekhin/docker-ansible/compare/v1.0.3...v1.1.0) (2025-10-31)
 
 
