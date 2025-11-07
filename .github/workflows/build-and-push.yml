@@ -6,8 +6,6 @@ on:
     paths:
       - 'Dockerfile'
       - '.github/workflows/build-and-push.yml'
-  schedule:
-    - cron: '0 1 1 * *'
 
 jobs:
   docker:
@@ -76,8 +74,8 @@ jobs:
       - name: 'Build and push ${{ matrix.tag }}'
         uses: 'docker/build-push-action@v6'
         with:
-          cache-from: 'type=gha,scope=${{ matrix.tag }}'
-          cache-to: 'type=gha,scope=${{ matrix.tag }}'
+          cache-from: ${{ matrix.tag != 'latest' && format('type=gha,scope={0}', matrix.tag) || '' }}
+          cache-to: ${{ matrix.tag != 'latest' && format('type=gha,scope={0}', matrix.tag) || '' }}
           context: .
           file: 'Dockerfile'
           build-args: ANSIBLE_VERSION=${{ matrix.tag }}
