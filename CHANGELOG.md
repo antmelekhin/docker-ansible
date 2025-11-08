@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/antmelekhin/docker-ansible/compare/v1.2.0...v1.2.1) (2025-11-08)
+
+
+### Fixes
+
+* updated Docker layers order and passed arg name ([5224bbf](https://github.com/antmelekhin/docker-ansible/commit/5224bbfa00c94a4b13eb744ce6c6112a03d90a05))
+
 ## [1.2.0](https://github.com/antmelekhin/docker-ansible/compare/v1.1.0...v1.2.0) (2025-11-07)
 
 
