@@ -78,7 +78,7 @@ jobs:
           cache-to: ${{ matrix.tag != 'latest' && format('type=gha,scope={0}', matrix.tag) || '' }}
           context: .
           file: 'Dockerfile'
-          build-args: ANSIBLE_VERSION=${{ matrix.tag }}
+          build-args: VERSION=${{ matrix.tag }}
           platforms: 'linux/amd64'
           push: ${{ github.event_name != 'pull_request' }}
           tags: '${{ github.actor }}/ansible:${{ matrix.tag }}'
