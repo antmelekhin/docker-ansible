@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/antmelekhin/docker-ansible/compare/v1.2.1...v1.3.0) (2026-01-11)
+
+
+### Features
+
+* add 13.2.0, 13.1.0, 13.0.0 and 12.3.0 versions ([6dfdf67](https://github.com/antmelekhin/docker-ansible/commit/6dfdf67f5b885e6ee48127d7acaa719d564cd21d))
+
+
+### Fixes
+
+* rm 13.* versions ([dbde3fd](https://github.com/antmelekhin/docker-ansible/commit/dbde3fd03004494fdcff62151c2ab8774438b240))
+
 ## [1.2.1](https://github.com/antmelekhin/docker-ansible/compare/v1.2.0...v1.2.1) (2025-11-08)
 
 
