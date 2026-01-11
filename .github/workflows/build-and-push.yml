@@ -15,6 +15,10 @@ jobs:
       matrix:
         include:
           - tag: 'latest'
+          - tag: '13.2.0'
+          - tag: '13.1.0'
+          - tag: '13.0.0'
+          - tag: '12.3.0'
           - tag: '12.2.0'
           - tag: '12.1.0'
           - tag: '12.0.0'
